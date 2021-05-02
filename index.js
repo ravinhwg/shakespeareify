@@ -7,7 +7,7 @@ const T = new Twit({
     access_token: process.env.access_token,
     access_token_secret: process.env.access_token_secret
 })
-const stream = T.stream("statuses/filter",{track: '@Shakespearebot2'});
+const stream = T.stream("statuses/filter",{track: '@shakespeareify'});
 
 stream.on('tweet', grabMention);
 
