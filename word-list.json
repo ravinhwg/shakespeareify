@@ -28,6 +28,10 @@
     "old_word": "beshrew"
   },
   {
+    "modern_word": "disdain",
+    "old_word": "ABHOR"
+  },
+  {
     "modern_word": "do",
     "old_word": "doth"
   },
@@ -40,12 +44,20 @@
     "old_word": "apothecary"
   },
   {
+    "modern_word": "equal",
+    "old_word": "egal"
+  },
+  {
     "modern_word": "face",
     "old_word": "visage"
   },
   {
     "modern_word": "fight",
     "old_word": "fray"
+  },
+  {
+    "modern_word": "handsome",
+    "old_word": "brave"
   },
   {
     "modern_word": "has",
@@ -112,12 +124,24 @@
     "old_word": "kinsmen"
   },
   {
+    "modern_word": "send",
+    "old_word": "sendeth"
+  },
+  {
     "modern_word": "soon",
     "old_word": "anon"
   },
   {
     "modern_word": "stop",
     "old_word": "stint"
+  },
+  {
+    "modern_word": "there",
+    "old_word": "thither"
+  },
+  {
+    "modern_word": "trouble",
+    "old_word": "coil"
   },
   {
     "modern_word": "truth",
@@ -146,6 +170,10 @@
   {
     "modern_word": "will",
     "old_word": "wilt"
+  },
+  {
+    "modern_word": "word",
+    "old_word": "character"
   },
   {
     "modern_word": "you",
