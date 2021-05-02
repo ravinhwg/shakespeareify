@@ -46,7 +46,7 @@ function mutateTweet(data, tweet){
     mutateArray.forEach((item, index) => {
         // for each word. Go throught the wordlist
         wordList.forEach((listWord, listIndex) => {
-            if(item.toUpperCase() === listWord.modern_word.toUpperCase()){
+            if(item.toUpperCase().replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ") === listWord.modern_word.toUpperCase()){
                 mutateArray[index] = listWord.old_word
             }
         })
