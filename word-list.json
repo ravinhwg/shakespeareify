@@ -32,6 +32,10 @@
     "old_word": "ABHOR"
   },
   {
+    "modern_word": "disgusting",
+    "old_word": "vile"
+  },
+  {
     "modern_word": "do",
     "old_word": "doth"
   },
@@ -62,6 +66,10 @@
   {
     "modern_word": "has",
     "old_word": "hath"
+  },
+  {
+    "modern_word": "hateful",
+    "old_word": "vile"
   },
   {
     "modern_word": "hatred",
@@ -118,6 +126,10 @@
   {
     "modern_word": "pharmacist",
     "old_word": "apothecary"
+  },
+  {
+    "modern_word": "recent",
+    "old_word": "young"
   },
   {
     "modern_word": "relatives",
@@ -182,5 +194,9 @@
   {
     "modern_word": "your",
     "old_word": "thy"
+  },
+  {
+    "modern_word": "yourself",
+    "old_word": "thyself"
   }
 ]
