@@ -1,19 +1,23 @@
 require('dotenv').config()
 const Twit = require('twit')
 const wordList = require('./wordList.js')
+const USERNAME = '@shakespeareify'
+const USER_ID = '1388734131345891328'
 const T = new Twit({
     consumer_key: process.env.consumer_key,
     consumer_secret: process.env.consumer_secret,
     access_token: process.env.access_token,
     access_token_secret: process.env.access_token_secret
 })
-const stream = T.stream("statuses/filter", { track: '@shakespeareify' });
+const stream = T.stream("statuses/filter", { track: USERNAME });
 
 stream.on('tweet', grabMention);
 
-function grabMention(tweet) {
+async function grabMention(tweet) {
     // Check if the bot is mentioned inside the tweet text. Or don't do anything
-    if (tweet.text === '@shakespeareify') {
+    console.log(!(tweet.in_reply_to_user_id_str === USER_ID))
+    console.log(await checkTheTweetAboveThisTweet(tweet.in_reply_to_status_id_str))
+    if (!(tweet.in_reply_to_user_id_str === USER_ID) && await checkTheTweetAboveThisTweet(tweet.in_reply_to_status_id_str)) {
         // Check if the tweet the bot is mentioned is a reply tweet
         const isReply = tweet.in_reply_to_status_id_str !== null;
         if (isReply) {
@@ -38,6 +42,8 @@ function grabMention(tweet) {
                 in_reply_to_status_id: tweet.id_str
             })
         }
+    }else{
+        console.log('Ignore. Replying to myself')
     }
 }
 
@@ -62,4 +68,20 @@ function mutateTweet(data, tweet) {
     }, (err, data, response) => {
         console.log(data)
     })
+}
+
+// Check if the tweet above this tweet has the bot mentioned
+function checkTheTweetAboveThisTweet(tweet_id_str){
+    const promise = new Promise((resolve, reject) => {
+        T.get('statuses/show', {
+            id: tweet_id_str
+        }, (err, data, response) => {
+            if(data.text.includes(USERNAME)){
+                resolve(false)
+            }else{
+                resolve(true)
+            }
+        })
+    })
+    return promise
 }
