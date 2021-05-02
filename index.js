@@ -12,6 +12,11 @@ const stream = T.stream("statuses/filter",{track: '@shakespeareify'});
 stream.on('tweet', grabMention);
 
 function grabMention(tweet){
+    // Check if the bot is mentioned inside the tweet text. Or don't do anything
+    if(!tweet.text.includes('@shakespeareify')){
+        return
+    }
+
     // Check if the tweet the bot is mentioned is a reply tweet
     const isReply = tweet.in_reply_to_status_id_str !== null;
     if(isReply){
