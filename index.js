@@ -30,7 +30,7 @@ async function grabMention(tweet) {
                     // Say that the tweet is not written in English!
                     T.post('statuses/update', {
                         status: `Oh! @${tweet.user.screen_name}, looks like thy tweet is not writ in English `,
-                        in_reply_to_status_id: tweet.id_str
+                        in_reply_to_status_id: tweet.id_str,
                     })
                 }
             })
@@ -39,7 +39,7 @@ async function grabMention(tweet) {
             // Tell the user to not to bother me by tagging me on main tweets
             T.post('statuses/update', {
                 status: `Valorous morrow to thee, @${tweet.user.screen_name}! Thither is nothing up thither. Calleth me in a thread.`,
-                in_reply_to_status_id: tweet.id_str
+                in_reply_to_status_id: tweet.id_str,
             })
         }
     }else{
@@ -64,7 +64,8 @@ function mutateTweet(data, tweet) {
     console.log('Reply char length: ' + finalText.length)
     T.post('statuses/update', {
         status: `@${tweet.user.screen_name} ${finalText}`,
-        in_reply_to_status_id: tweet.id_str
+        in_reply_to_status_id: tweet.id_str,
+        auto_populate_reply_metadata: true
     }, (err, data, response) => {
         console.log('Reply: ' + data.text)
         if(err){
