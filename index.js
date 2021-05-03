@@ -52,10 +52,10 @@ function mutateTweet(data, tweet) {
     // Loop thought the incoming tweet only send it to the translator if the value is not a url
    const URL_REGEX = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/gm
    const tweetWordsArray = JSON.parse(JSON.stringify(data)).text.split(' ')
-   
+
    tweetWordsArray.forEach((item, index) => {
-       if(!URL_REGEX.test(item)){
-           // Not a url
+       if(!URL_REGEX.test(item) && !item.includes('@')){
+           // Word is not a url and not a twitter handle
            tweetWordsArray[index] = translate(item)
        }
    })
