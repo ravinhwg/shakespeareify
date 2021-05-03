@@ -1,6 +1,6 @@
 require('dotenv').config()
 const Twit = require('twit')
-const wordList = require('./wordList.js')
+const translate = require('./worker')
 const USERNAME = '@shakespeareify'
 const USER_ID = '1388734131345891328'
 const T = new Twit({
@@ -48,22 +48,11 @@ async function grabMention(tweet) {
 }
 
 function mutateTweet(data, tweet) {
-    // Mutating the tweet into archiac english here.
-    const tweetToMutate = JSON.parse(JSON.stringify(data)).text
-    const mutateArray = tweetToMutate.split(' ')
-    // Now loop throught the array for the first time and eplace the words
-    mutateArray.forEach((item, index) => {
-        // for each word. Go throught the wordlist
-        wordList.forEach((listWord, listIndex) => {
-            if (item.toUpperCase().replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ") === listWord.modern_word.toUpperCase()) {
-                mutateArray[index] = listWord.old_word
-            }
-        })
-    })
-    // Convert it to a string
-    const finalTweet = mutateArray.join(' ')
+
+   const finalText = translate(JSON.parse(JSON.stringify(data)).text)
+
     T.post('statuses/update', {
-        status: `@${tweet.user.screen_name} ${finalTweet}`,
+        status: `@${tweet.user.screen_name} ${finalText}`,
         in_reply_to_status_id: tweet.id_str
     }, (err, data, response) => {
         console.log(data)
