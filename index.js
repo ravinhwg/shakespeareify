@@ -48,14 +48,25 @@ async function grabMention(tweet) {
 }
 
 function mutateTweet(data, tweet) {
-
-   const finalText = translate(JSON.parse(JSON.stringify(data)).text)
-
+    console.log('Original tweet: ' + data.text)
+    // Loop thought the incoming tweet only send it to the translator if the value is not a url
+   const URL_REGEX = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/gm
+   const tweetWordsArray = JSON.parse(JSON.stringify(data)).text.split(' ')
+   
+   tweetWordsArray.forEach((item, index) => {
+       if(!URL_REGEX.test(item)){
+           // Not a url
+           tweetWordsArray[index] = translate(item)
+       }
+   })
+   const finalText = tweetWordsArray.join(' ')
+    console.log('Reply before sending: ' + finalText)
+    console.log('Reply char length: ' + finalText.length)
     T.post('statuses/update', {
         status: `@${tweet.user.screen_name} ${finalText}`,
         in_reply_to_status_id: tweet.id_str
     }, (err, data, response) => {
-        console.log(data)
+        console.log('Reply: ' + data.text)
     })
 }
 

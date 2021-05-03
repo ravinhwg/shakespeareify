@@ -34,7 +34,7 @@ rev_regex2 = jsonData.rev_regex2.split("\n");
 ordering1 = jsonData.ordering1.split("\n");
 ordering2 = jsonData.ordering2.split("\n");
 
-evenUpSizes(phrases1,phrases2);
+            evenUpSizes(phrases1,phrases2);
 			evenUpSizes(words1,words2);
 			evenUpSizes(intraword1,intraword2);
 			evenUpSizes(prefixes1,prefixes2);
