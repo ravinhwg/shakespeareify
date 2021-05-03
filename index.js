@@ -80,7 +80,7 @@ function checkTheTweetAboveThisTweet(tweet_id_str){
         T.get('statuses/show', {
             id: tweet_id_str
         }, (err, data, response) => {
-            if(data.text.includes(USERNAME)){
+            if( data.text === undefined || data.text.includes(USERNAME)){
                 resolve(false)
             }else{
                 resolve(true)
