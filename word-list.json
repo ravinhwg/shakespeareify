@@ -1,5 +1,13 @@
 [
   {
+    "modern_word": "after",
+    "old_word": "aft'r"
+  },
+  {
+    "modern_word": "also",
+    "old_word": "eke"
+  },
+  {
     "modern_word": "anger",
     "old_word": "rancor"
   },
@@ -8,8 +16,20 @@
     "old_word": "art"
   },
   {
+    "modern_word": "back",
+    "old_word": "backeth"
+  },
+  {
+    "modern_word": "be",
+    "old_word": "beest"
+  },
+  {
     "modern_word": "changable",
     "old_word": "fickle"
+  },
+  {
+    "modern_word": "come",
+    "old_word": "cometh"
   },
   {
     "modern_word": "confession",
@@ -18,6 +38,10 @@
   {
     "modern_word": "conversation",
     "old_word": "discourse"
+  },
+  {
+    "modern_word": "could",
+    "old_word": "couldst"
   },
   {
     "modern_word": "criticize",
@@ -56,6 +80,10 @@
     "old_word": "egal"
   },
   {
+    "modern_word": "even",
+    "old_word": "coequal"
+  },
+  {
     "modern_word": "face",
     "old_word": "visage"
   },
@@ -64,8 +92,28 @@
     "old_word": "fray"
   },
   {
+    "modern_word": "for",
+    "old_word": "f'r"
+  },
+  {
+    "modern_word": "get",
+    "old_word": "receiveth"
+  },
+  {
+    "modern_word": "give",
+    "old_word": "giveth"
+  },
+  {
+    "modern_word": "go",
+    "old_word": "wend"
+  },
+  {
     "modern_word": "goes",
     "old_word": "goeth"
+  },
+  {
+    "modern_word": "good",
+    "old_word": "valorous"
   },
   {
     "modern_word": "guy",
@@ -96,12 +144,28 @@
     "old_word": "hath"
   },
   {
+    "modern_word": "he",
+    "old_word": "that gent"
+  },
+  {
     "modern_word": "here",
     "old_word": "hither"
   },
   {
+    "modern_word": "him",
+    "old_word": "that gent"
+  },
+  {
     "modern_word": "hurry",
     "old_word": "hie"
+  },
+  {
+    "modern_word": "if",
+    "old_word": "if't be true"
+  },
+  {
+    "modern_word": "it",
+    "old_word": "t"
   },
   {
     "modern_word": "joke",
@@ -112,8 +176,16 @@
     "old_word": "jocund"
   },
   {
+    "modern_word": "know",
+    "old_word": "knowth"
+  },
+  {
     "modern_word": "like",
     "old_word": "liketh"
+  },
+  {
+    "modern_word": "look",
+    "old_word": "behold"
   },
   {
     "modern_word": "love",
@@ -122,6 +194,10 @@
   {
     "modern_word": "loves",
     "old_word": "loveth"
+  },
+  {
+    "modern_word": "make",
+    "old_word": "maketh"
   },
   {
     "modern_word": "makes",
@@ -148,8 +224,16 @@
     "old_word": "morrow"
   },
   {
+    "modern_word": "my",
+    "old_word": "mine own"
+  },
+  {
     "modern_word": "no",
     "old_word": "nay"
+  },
+  {
+    "modern_word": "now",
+    "old_word": "anon"
   },
   {
     "modern_word": "often",
@@ -158,6 +242,18 @@
   {
     "modern_word": "oh",
     "old_word": "alas"
+  },
+  {
+    "modern_word": "or",
+    "old_word": "r"
+  },
+  {
+    "modern_word": "other",
+    "old_word": "oth'r"
+  },
+  {
+    "modern_word": "over",
+    "old_word": "ov'r"
   },
   {
     "modern_word": "pharmacist",
@@ -172,8 +268,20 @@
     "old_word": "kinsmen"
   },
   {
+    "modern_word": "say",
+    "old_word": "sayeth"
+  },
+  {
+    "modern_word": "see",
+    "old_word": "seeth"
+  },
+  {
     "modern_word": "send",
     "old_word": "sendeth"
+  },
+  {
+    "modern_word": "she",
+    "old_word": "the lady"
   },
   {
     "modern_word": "sing",
@@ -192,8 +300,32 @@
     "old_word": "stint"
   },
   {
+    "modern_word": "take",
+    "old_word": "taketh"
+  },
+  {
+    "modern_word": "that",
+    "old_word": "yond"
+  },
+  {
+    "modern_word": "them",
+    "old_word": "those folk"
+  },
+  {
     "modern_word": "there",
     "old_word": "thither"
+  },
+  {
+    "modern_word": "they",
+    "old_word": "those gents"
+  },
+  {
+    "modern_word": "think",
+    "old_word": "bethink"
+  },
+  {
+    "modern_word": "time",
+    "old_word": "timeth"
   },
   {
     "modern_word": "trouble",
@@ -208,8 +340,16 @@
     "old_word": "verily"
   },
   {
+    "modern_word": "use",
+    "old_word": "useth"
+  },
+  {
     "modern_word": "villian",
     "old_word": "knave"
+  },
+  {
+    "modern_word": "want",
+    "old_word": "wanteth"
   },
   {
     "modern_word": "wedding",
@@ -218,6 +358,10 @@
   {
     "modern_word": "were",
     "old_word": "w're"
+  },
+  {
+    "modern_word": "when",
+    "old_word": "at which hour"
   },
   {
     "modern_word": "where",
@@ -238,6 +382,14 @@
   {
     "modern_word": "word",
     "old_word": "character"
+  },
+  {
+    "modern_word": "work",
+    "old_word": "w'rk"
+  },
+  {
+    "modern_word": "would",
+    "old_word": "wouldst"
   },
   {
     "modern_word": "you",
