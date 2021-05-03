@@ -67,6 +67,9 @@ function mutateTweet(data, tweet) {
         in_reply_to_status_id: tweet.id_str
     }, (err, data, response) => {
         console.log('Reply: ' + data.text)
+        if(err){
+            console.log(err.message)
+        }
     })
 }
 
